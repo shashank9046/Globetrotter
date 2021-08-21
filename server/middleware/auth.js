@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
-
-const secret = 'test';
+import config from 'config'
+const secret = config.get('jwtsecret')
 
 const auth = async (req, res, next) => {
     try {
